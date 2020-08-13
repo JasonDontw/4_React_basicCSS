@@ -1,0 +1,77 @@
+.show{
+    animation: show-item 0.5s ease-in forwards;/*forward使動畫結束後不回復原始*/
+}
+
+.hide{
+    animation: hide-item 0.5s ease-in forwards;/*forward使動畫結束後不回復原始*/
+}
+
+
+@keyframes show-item{
+    0% {
+        opacity: 0;
+        color:red;
+    }
+
+    50% {
+        opacity: 0.5;
+        color:green;
+    }
+    
+    100% {
+        opacity: 1;
+        color:blue;
+    }
+}
+
+@keyframes hide-item{
+    0% {
+        opacity: 1;
+        color:red;
+    }
+
+    50% {
+        opacity: 0.5;
+        color:green;
+    }
+    
+    100% {
+        opacity: 0;
+        color:blue;
+    }
+}
+
+
+.fade-enter,.fade-appear{
+    color:red;
+    opacity: 0;
+} 
+
+.fade-enter-active,.fade-appear-active{
+    color:green;
+    opacity: 0.5;
+    transition: all 0.5s ease-in;
+}
+
+.fade-enter-done,.fade-appear-done{
+    opacity: 1;
+    color:blue;
+
+}
+
+
+.fade-exit{
+    color:blue;
+    opacity: 1;
+}
+
+.fade-exit-active{
+    color:green;
+    opacity: 1;
+    transition: all 0.5s ease-in;
+} 
+
+.fade-exit-done{
+    color:red;
+    opacity: 0;
+}
